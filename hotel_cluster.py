@@ -40,6 +40,8 @@ class Hotel_Cluster(Hotel_Tfidf):
 
         ''' makes and prints clusters of our hotels '''
 
+        # self.num_clusters = 5
+        # *****changed
         self.num_clusters = 5
 
         self.km = KMeans(n_clusters=self.num_clusters)
@@ -55,8 +57,11 @@ class Hotel_Cluster(Hotel_Tfidf):
             ranks.append(i)
 
         # every group has 1000 ramdonly shuffled hotels, change indeces
-        self.hotels = { 'hotel_name': self.hotel_names[:100], 'rank': ranks[:100],
-                'hotel_reviews': self.hotel_reviews[:100], 'cluster': self.clusters}
+        # self.hotels = { 'hotel_name': self.hotel_names[:100], 'rank': ranks[:100],
+        #         'hotel_reviews': self.hotel_reviews[:100], 'cluster': self.clusters}
+
+        self.hotels = { 'hotel_name': self.hotel_names, 'rank': ranks,
+                'hotel_reviews': self.hotel_reviews, 'cluster': self.clusters}
 
         self.frame = pd.DataFrame(self.hotels, index = [self.clusters] , columns = ['rank',
                 'hotel_name', 'hotel_reviews', 'cluster'])

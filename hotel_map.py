@@ -85,7 +85,9 @@ class Hotel_Map(object):
             if idx == 31:
                 continue
             hotel, all_reviews = self._get_hotel_reviews(name)
-            self.hotel_names.append(hotel)
+            # ***** changed hotel name
+            name_start_index = len('usa_nevada_las-vegas_')
+            self.hotel_names.append(hotel[name_start_index:])
             self.hotel_reviews.append(all_reviews)
 
         print('There are {} hotels in the dataset.'.format(
