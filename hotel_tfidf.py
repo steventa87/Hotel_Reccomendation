@@ -53,16 +53,16 @@ class Hotel_Tfidf(Hotel_Map):
 
         # for testing purposes, you can use this snippet to run kmeans on 100
         # hotels of the whole corpus.
-        self.reviews_grouped = [self.hotel_reviews[i:i + 100] for i in range(0,
-                            len(self.hotel_reviews), 100)]
-        print("There are {} hotels in our sample.".format(
-                                                    len(self.reviews_grouped[0])))
+        # self.reviews_grouped = [self.hotel_reviews[i:i + 100] for i in range(0,
+        #                     len(self.hotel_reviews), 100)]
+        # print("There are {} hotels in our sample.".format(
+        #                                             len(self.reviews_grouped[0])))
 
         # initiate TfidfVectorizer instance with the set hyperparameters that were mentioned above
         self.tfidf_vectorizer = TfidfVectorizer(max_df=0.8, max_features=200000,
                                  min_df=0.2, stop_words='english',
                                  use_idf=True, tokenizer=self._tokenize_and_stem, ngram_range=(1, 3))
-        self.tfidf_matrix = self.tfidf_vectorizer.fit_transform(self.reviews_grouped[0])
+        self.tfidf_matrix = self.tfidf_vectorizer.fit_transform(self.hotel_reviews) # *****changed use self.hotel_reviews instead of self.reviews_grouped[0]
         print("tfidf shape: {}".format(self.tfidf_matrix.shape))
 
         # saving the matrix by dumping into a pickle file. set *protocol=2* if you are using python2
