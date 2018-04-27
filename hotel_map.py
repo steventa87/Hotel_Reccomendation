@@ -81,13 +81,14 @@ class Hotel_Map(object):
         self.hotel_reviews = []
 
         for idx, name in enumerate(self.file_names):
-            # for some reason file #31 isn't working
-            if idx == 31:
+            # for some reason file #31 isn't working for vegas
+            # hotel #45 doesn't work for NYC
+            if idx == 31 or idx == 45:
                 continue
             hotel, all_reviews = self._get_hotel_reviews(name)
             # ***** changed hotel name
-            name_start_index = len('usa_nevada_las-vegas_')
-            self.hotel_names.append(hotel[name_start_index:])
+            # name_start_index = len('usa_nevada_las-vegas_')
+            self.hotel_names.append(hotel)
             self.hotel_reviews.append(all_reviews)
 
         print('There are {} hotels in the dataset.'.format(
