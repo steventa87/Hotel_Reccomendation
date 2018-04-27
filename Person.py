@@ -70,12 +70,16 @@ class Person(object):
         # use vectorizer to transform user input
         self.tokenized_inputs = self.city.tfidf_vectorizer.transform(self.searches)
 
+        # get city-hotel matrix
         self.vectors = self.city.tfidf_matrix
 
+        # calculate similarities between user input and city-hotel matrix
         self.cosine_similarities = linear_kernel(self.tokenized_inputs, self.vectors)
 
+        # hotel names
         self.h_names = self.city.hotel_names
 
+        # for each query search, find top 3 closest hotels
         for i, item in enumerate(self.searches):
             print(item)
             print(self._get_top_values(self.cosine_similarities[i], 3, self.h_names))
