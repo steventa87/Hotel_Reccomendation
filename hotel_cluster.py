@@ -42,7 +42,7 @@ class Hotel_Cluster(Hotel_Tfidf):
 
         # self.num_clusters = 5
         # *****changed
-        self.num_clusters = 5
+        self.num_clusters = 10
 
         self.km = KMeans(n_clusters=self.num_clusters)
 
