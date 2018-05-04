@@ -27,7 +27,7 @@ import mpld3
 from hotel_tfidf import Hotel_Tfidf
 
 
-class Hotel_Cluster(Hotel_Tfidf):
+class Hotel_Kmeans(Hotel_Tfidf):
 
     ''' Class takes hotel tfidf and prints out K-means clusers'''
 
