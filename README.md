@@ -1,23 +1,23 @@
 # Hotel_Reccomendation
 
-Reusable Review Energy: Hotel Recommender - TripAdvisor
+### Reusable Review Energy: Hotel Recommender - TripAdvisor
 
-Problem:
+#### Problem:
 
 Most people only look at star ratings and read a couple reviews. The other hundreds or thousands of reviews are wasted!
 
-Objective:
+#### Objective:
 
 Build a Web App Hotel Recommender utilizing customer experiences from TripAdvisor Data.
 
-NLP Models:
+#### NLP Models:
 
 1) Build TF-IDF Matrix of each
 hotel.
 2) Vectorize user input.
 3) Recommend hotel based on cosine similarity .
 
-Improve Recommendations:
+#### Improve Recommendations:
 
 1) Separate hotel reviews:
 Positive, Neutral, Negative
@@ -25,7 +25,7 @@ Positive, Neutral, Negative
 important features
 3) Reduce dimensionality for visual interpretation
 
-Topic Models Tech:
+#### Topic Models Tech:
 
 1) VADER Sentiment Analysis
 2) Latent Dirichlet Allocation
