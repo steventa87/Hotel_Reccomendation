@@ -60,7 +60,8 @@ class Hotel_Tfidf(Hotel_Map):
 
         # initiate TfidfVectorizer instance with the set hyperparameters that were mentioned above
         self.tfidf_vectorizer = TfidfVectorizer(max_df=0.8,
-                                 min_df=0.2, stop_words='english',
+                                min_df=0.2, 
+                                stop_words='english',
                                  use_idf=True, tokenizer=self._tokenize_and_stem, ngram_range=(1, 3))
         self.tfidf_matrix = self.tfidf_vectorizer.fit_transform(self.hotel_reviews).toarray()
 

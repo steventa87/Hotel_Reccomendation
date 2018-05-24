@@ -102,7 +102,7 @@ class Sentiment_Model(object):
 
         self.tf_vectorizer = CountVectorizer(strip_accents = 'unicode',
                                         stop_words = 'english',
-                                        ngram_range=(3, 3),
+                                        ngram_range=(2, 2),
                                         lowercase = True,
                                         token_pattern = r'\b[a-zA-Z]{3,}\b'
                                         #max_df = 1,
@@ -115,7 +115,7 @@ class Sentiment_Model(object):
 
         self.neg_tf_vectorizer = CountVectorizer(strip_accents = 'unicode',
                                         stop_words = 'english',
-                                        ngram_range=(3, 3),
+                                        ngram_range=(2, 2),
                                         lowercase = True,
                                         token_pattern = r'\b[a-zA-Z]{3,}\b'
                                         #max_df = 1,
