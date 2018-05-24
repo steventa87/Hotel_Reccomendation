@@ -1,0 +1,60 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/static/mpg.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>Hotel Reccomender</title>
+</head>
+<body>
+        <div class="bgimage" id="centerLogin" style=background-image:url("https://images.pexels.com/photos/261169/pexels-photo-261169.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")>
+            <div>
+              <div class="offset-md-4 col-md-4 offset-md-4 cleanBorder whiteBackground">
+              <img class="img-fluid rounded mx-auto d-block marginBottom" src="https://www.tnooz.com/wp-content/uploads/2013/10/hotel-search-icons.jpg"/>
+              <form>
+                <div class="form-group">
+                  <input
+                    id="searchValue"
+                    type="text"
+                    class="form-control"
+                    placeholder="Search Here"
+                    value=""
+                  />
+                </div>
+                <button type="button" class="btn btn-outline-danger btn-block" id="search">Search</button>
+              </form>
+              </div>
+            </div>
+            <br/>
+            <!-- <br/>
+            <br/> -->
+            <div class="container">
+                <div class="row" id="hotelRec">
+                </div>
+            </div>
+        </div>
+        <!-- copying code here -->
+        <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <img class="model-content" src="https://s3-us-west-1.amazonaws.com/derrickportfolio.com/images/Screen+Shot+2018-05-06+at+4.08.23+PM.png" width="790"></img>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end copy code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- this is how html talks to JS -->
+    <script src="/static/mpg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.35.2/plotly.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
